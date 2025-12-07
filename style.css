@@ -111,6 +111,40 @@ body{
 .contact-form .form-actions{display:flex;gap:10px;margin-top:12px}
 .form-note{font-size:13px;color:var(--muted);margin-top:10px}
 
+/* CONTACT SOCIAL ICONS */
+.contact-social {
+  display: flex;
+  gap: 14px;
+  margin-top: 22px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--glass);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--accent);
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: transform var(--transition), background var(--transition);
+}
+
+.contact-icon .icon {
+  font-size: 18px;
+  display: flex;
+}
+
+.contact-icon:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.08);
+}
+
+
 /* Footer */
 .site-footer{padding:18px 0;text-align:center;border-top:1px solid rgba(255,255,255,0.02);margin-top:40px;color:var(--muted)}
 
@@ -353,5 +387,6 @@ body{
     padding-bottom: 10px;
   }
 }
+
 
 
