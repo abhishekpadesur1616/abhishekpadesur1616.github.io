@@ -55,11 +55,30 @@ body{
 
 /* HERO */
 .hero{padding-top:100px;padding-bottom:60px}
-.hero-grid{display:grid;grid-template-columns:1fr 360px;gap:30px;align-items:center}
+
+/* make hero a single column so no space is reserved for a photo */
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:30px;
+  align-items:center;
+  justify-items:center;
+}
+
+/* constrain and center the hero text so it looks good without a photo */
+.hero-text{
+  max-width: 820px;
+  text-align: center;
+}
+
+/* heading + accent */
 .hero-text h1{font-size:38px;margin-bottom:10px}
 .hero-text h1 span{color:var(--accent)}
 .lead{color:var(--muted);margin-bottom:16px}
-.profile-photo{width:320px;height:320px;object-fit:cover;border-radius:16px;border:6px solid rgba(255,255,255,0.04);box-shadow:0 12px 40px rgba(0,0,0,0.5)}
+
+/* remove any profile-photo styling (delete original .profile-photo block from file) */
+/* (if a .profile-photo rule exists elsewhere, remove it) */
+
 .hero-cta .btn{margin-right:12px}
 
 /* Sections */
@@ -334,4 +353,5 @@ body{
     padding-bottom: 10px;
   }
 }
+
 
