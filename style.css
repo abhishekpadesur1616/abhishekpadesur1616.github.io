@@ -219,3 +219,119 @@ body{
   justify-content: center;
   gap: 10px;
 }
+
+
+/* EXPERIENCE SECTION */
+.exp-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.exp-card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 16px;
+  background: var(--card);
+  padding: 18px;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.exp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+}
+
+.exp-left {
+  padding-right: 10px;
+  border-right: 1px solid rgba(255,255,255,0.04);
+}
+
+.exp-role {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.exp-company {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.exp-right {
+  padding-left: 10px;
+}
+
+.exp-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.exp-date {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.exp-location {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.exp-toggle {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 18px;
+  color: var(--muted);
+  transition: transform 280ms ease, color 280ms ease;
+}
+
+.exp-toggle:hover {
+  transform: translateY(-3px);
+  color: var(--accent);
+}
+
+/* Collapsible Details */
+.exp-details {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 4px;
+  transition: max-height 420ms ease, padding 320ms ease;
+}
+
+.exp-card.expanded .exp-details {
+  max-height: 600px;
+  padding: 10px 4px 6px;
+}
+
+.exp-card.expanded .exp-toggle {
+  transform: rotate(180deg);
+  color: var(--accent);
+}
+
+.exp-details ul {
+  margin: 8px 0 0 20px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .exp-card {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-left {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    padding-bottom: 10px;
+  }
+}
+
