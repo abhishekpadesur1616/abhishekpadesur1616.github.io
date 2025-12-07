@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `Name: ${name}\nEmail: ${email}\n\n${message}`
       );
 
+      // TODO: replace with your real email
       window.location.href = `mailto:yourmail@gmail.com?subject=${subject}&body=${body}`;
     });
   }
