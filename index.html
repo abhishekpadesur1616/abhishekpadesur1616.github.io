@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abhishek | Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Abhishek — MCA student, AI/ML & Web Developer. Portfolio.">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Abhishek</div>
+
+      <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1 class="reveal">Hello, I'm <span>Abhishek</span></h1>
+        <p class="lead reveal" data-delay="100">MCA Student • AI/ML Enthusiast • Web Developer from Bangalore</p>
+
+        <div class="hero-cta reveal" data-delay="200">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn ghost" href="resume.pdf" download>Download Resume</a>
+        </div>
+
+        <div class="social reveal" data-delay="300">
+          <a href="#" target="_blank">GitHub</a>
+          <a href="#" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="hero-photo reveal" data-delay="150">
+        <!-- Replace 'photo.jpg' with your actual photo -->
+        <img src="photo.jpg" alt="Abhishek photo" class="profile-photo">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section-title reveal">About Me</h2>
+      <p class="reveal" data-delay="100">
+        I'm an MCA student from Bangalore with a passion for AI, Machine Learning and building elegant web apps. I enjoy turning data into insights and prototypes into products.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <h2 class="section-title reveal">Projects</h2>
+
+      <div class="projects-grid">
+        <!-- Card 1 -->
+        <article class="project-card reveal" data-delay="100">
+          <img src="project1.jpg" alt="Project 1 image" class="project-image">
+          <div class="card-body">
+            <h3>Spider Species Classification</h3>
+            <p>Image classification using CNNs, EfficientNet, and ResNet; trained on custom dataset.</p>
+            <div class="card-actions">
+              <a class="btn small" href="#" target="_blank">Live</a>
+              <a class="btn small ghost" href="#" target="_blank">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="project-card reveal" data-delay="150">
+          <img src="project2.jpg" alt="Project 2 image" class="project-image">
+          <div class="card-body">
+            <h3>Sentiment Analysis</h3>
+            <p>NLP pipeline to detect sentiment and emotion from text using transformer-based models.</p>
+            <div class="card-actions">
+              <a class="btn small" href="#" target="_blank">Live</a>
+              <a class="btn small ghost" href="#" target="_blank">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="project-card reveal" data-delay="200">
+          <img src="project3.jpg" alt="Project 3 image" class="project-image">
+          <div class="card-body">
+            <h3>Portfolio Website</h3>
+            <p>Responsive portfolio built with HTML, CSS & vanilla JS; deployed on GitHub Pages.</p>
+            <div class="card-actions">
+              <a class="btn small" href="#" target="_blank">Live</a>
+              <a class="btn small ghost" href="#" target="_blank">Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <h2 class="section-title reveal">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill reveal" data-delay="100">
+          <h4>Python</h4>
+          <div class="progress">
+            <span class="progress-bar" data-value="90"></span>
+          </div>
+        </div>
+
+        <div class="skill reveal" data-delay="150">
+          <h4>Machine Learning</h4>
+          <div class="progress">
+            <span class="progress-bar" data-value="85"></span>
+          </div>
+        </div>
+
+        <div class="skill reveal" data-delay="200">
+          <h4>Deep Learning</h4>
+          <div class="progress">
+            <span class="progress-bar" data-value="80"></span>
+          </div>
+        </div>
+
+        <div class="skill reveal" data-delay="250">
+          <h4>Web Dev (HTML/CSS/JS)</h4>
+          <div class="progress">
+            <span class="progress-bar" data-value="88"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section-title reveal">Contact</h2>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal" data-delay="100">
+          <p><strong>Email:</strong> <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a></p>
+          <p><strong>Location:</strong> Bangalore, Karnataka, India</p>
+          <p>Prefer email — I usually reply within a day.</p>
+        </div>
+
+        <form id="contactForm" class="contact-form reveal" data-delay="150">
+          <label>
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+          <label>
+            <input type="email" name="email" placeholder="Your email" required>
+          </label>
+          <label>
+            <textarea name="message" rows="5" placeholder="Message" required></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn">Send</button>
+            <button type="reset" class="btn ghost">Reset</button>
+          </div>
+          <p class="form-note">This form uses <code>mailto:</code> — it will open your email client. Or contact me directly at <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a>.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Abhishek. Built with ❤ • <a href="https://abhishekpadesur1616.github.io" target="_blank">View site</a></p>
+    </div>
+  </footer>
+</body>
+</html>
