@@ -360,70 +360,72 @@
 
   
   <!-- CONTACT -->
-  <section id="contact" class="section contact">
-    <div class="container">
-      <h2 class="section-title reveal">Contact</h2>
+<section id="contact" class="section contact">
+  <div class="container">
+    <h2 class="section-title reveal">Contact</h2>
 
-      <div class="contact-grid">
-        <div class="contact-info reveal" data-delay="100">
-          <p><strong>Email:</strong> <a href="abhishekpadesur7@gmail.com">abhishekpadesur7@gmail.com</a></p>
-          <p><strong>Location:</strong> Hubli, Karnataka, India</p>
-          <p>Prefer email — I usually reply within a day.</p>
+    <div class="contact-grid">
+
+      <!-- Contact Info -->
+      <div class="contact-info reveal" data-delay="100">
+        <p><strong>Email:</strong> 
+          <a href="mailto:abhishekpadesur7@gmail.com">abhishekpadesur7@gmail.com</a>
+        </p>
+
+        <p><strong>Location:</strong> Hubli, Karnataka, India</p>
+
+        <p>Prefer email — I usually reply within a day.</p>
+
+        <!-- Social Icons (Added Here) -->
+        <div class="contact-social reveal" data-delay="200">
+
+          <a href="https://github.com/abhishekpadesur1616" target="_blank" class="contact-icon">
+            <span class="icon">🐱‍💻</span> GitHub
+          </a>
+
+          <a href="https://www.linkedin.com/in/abhishek-padesur-1616-/" target="_blank" class="contact-icon">
+            <span class="icon">🔗</span> LinkedIn
+          </a>
+
+          <a href="https://instagram.com/YOUR_INSTAGRAM_ID" target="_blank" class="contact-icon">
+            <span class="icon">📸</span> Instagram
+          </a>
+
+          <a href="https://twitter.com/YOUR_TWITTER_ID" target="_blank" class="contact-icon">
+            <span class="icon">🐦</span> Twitter
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <form id="contactForm" class="contact-form reveal" data-delay="150">
+        <label>
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label>
+          <input type="email" name="email" placeholder="Your email" required>
+        </label>
+        <label>
+          <textarea name="message" rows="5" placeholder="Message" required></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Send</button>
+          <button type="reset" class="btn ghost">Reset</button>
         </div>
 
-        <form id="contactForm" class="contact-form reveal" data-delay="150">
-          <label>
-            <input type="text" name="name" placeholder="Your name" required>
-          </label>
-          <label>
-            <input type="email" name="email" placeholder="Your email" required>
-          </label>
-          <label>
-            <textarea name="message" rows="5" placeholder="Message" required></textarea>
-          </label>
-          <div class="form-actions">
-            <button type="submit" class="btn">Send</button>
-            <button type="reset" class="btn ghost">Reset</button>
-          </div>
+        <p class="form-note">
+          This form uses <code>mailto:</code> — it will open your email client.  
+          Or contact me directly at 
+          <a href="mailto:abhishekpadesur7@gmail.com">abhishekpadesur7@gmail.com</a>.
+        </p>
+      </form>
 
-
-
-          <div class="contact-social reveal" data-delay="200">
-
-  <a href="https://github.com/abhishekpadesur1616" target="_blank" class="contact-icon">
-    <span class="icon">🐱‍💻</span>
-    GitHub
-  </a>
-
-  <a href="https://www.linkedin.com/in/abhishek-padesur-1616-/" target="_blank" class="contact-icon">
-    <span class="icon">🔗</span>
-    LinkedIn
-  </a>
-
-  <a href="https://instagram.com/YOUR_INSTAGRAM_ID" target="_blank" class="contact-icon">
-    <span class="icon">📸</span>
-    Instagram
-  </a>
-
-  <a href="https://twitter.com/YOUR_TWITTER_ID" target="_blank" class="contact-icon">
-    <span class="icon">🐦</span>
-    Twitter
-  </a>
-
-</div>
-
-
-
-
-
-
-
-          
-          <p class="form-note">This form uses <code>mailto:</code> — it will open your email client. Or contact me directly at <a href="abhishekpadesur7@gmail.com">abhishekpadesur7@gmail.com</a>.</p>
-        </form>
-      </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <footer class="site-footer">
     <div class="container">
@@ -432,6 +434,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
