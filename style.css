@@ -115,34 +115,33 @@ body{
 .contact-social {
   display: flex;
   gap: 14px;
-  margin-top: 22px;
-  justify-content: center;
+  margin-top: 18px;
   flex-wrap: wrap;
 }
 
 .contact-icon {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 16px;
+  gap: 6px;
+  padding: 8px 14px;
   background: var(--glass);
   border: 1px solid rgba(255,255,255,0.08);
   color: var(--accent);
   border-radius: 10px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 15px;
   transition: transform var(--transition), background var(--transition);
 }
 
 .contact-icon .icon {
   font-size: 18px;
-  display: flex;
 }
 
 .contact-icon:hover {
   transform: translateY(-3px);
-  background: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.1);
 }
+
 
 
 /* Footer */
@@ -387,6 +386,7 @@ body{
     padding-bottom: 10px;
   }
 }
+
 
 
 
