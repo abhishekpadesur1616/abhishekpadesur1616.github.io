@@ -81,3 +81,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }));
 });
+
+// Education card interactivity: toggle expand/collapse with keyboard support
+(function educationToggle() {
+  const eduToggles = document.querySelectorAll('.edu-head.toggle');
+
+  eduToggles.forEach(head => {
+    const card = head.closest('.edu-card');
+    const chevron = head.querySelector('.chev');
+
+    const toggle = (ev) => {
+      const expanded = card.classList.toggle('expanded');
+      head.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+
+      // if expanded, smooth scroll the card into view on small screens
+      if (expanded && window.innerWidth < 900) {
+        setTimeout(() => card.scrollIntoView({ behavior: 'smooth', block: 'center' }), 220);
+      }
+    };
+
+    head.addEventListener('click', toggle);
+
+    // keyboard accessibility: Enter or Space
+    head.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  });
+})();
