@@ -44,7 +44,7 @@ body{
   z-index:60;
 }
 .header-inner{display:flex;align-items:center;gap:18px;justify-content:space-between;padding:14px 20px}
-.brand{font-weight:900;font-size:20px;font-family:'Rockwell Extra Bold', Rockwell, 'Times New Roman', serif}
+.brand{font-weight:900;font-size:20px;font-family:'Rockwell Extra Bold', Rockwell, serif}
 .nav{display:flex;gap:14px}
 .nav a{color:var(--text);text-decoration:none;padding:8px;border-radius:8px}
 .nav a:hover{background:var(--glass);transform:translateY(-2px)}
@@ -554,6 +554,22 @@ body.light .modal-panel { background: rgba(255,255,255,0.06); }
   .menu-btn {
     display: block !important;
   }
+  /* Fix mobile menu button visibility */
+@media (max-width: 900px) {
+  .menu-btn {
+    background: var(--accent) !important; /* Blue background */
+    color: #000 !important; /* Black icon/text so it is visible */
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 8px 12px;
+    border-radius: 8px;
+  }
+
+  /* Optional: hover effect */
+  .menu-btn:hover {
+    background: #00c8e0 !important; /* slightly lighter blue */
+  }
+}
+
 }
 
 /* When menu is opened */
@@ -594,20 +610,6 @@ body.light .modal-panel { background: rgba(255,255,255,0.06); }
 
 
 
-/* Fix mobile menu button visibility */
-@media (max-width: 900px) {
-  .menu-btn {
-    background: var(--accent) !important; /* Blue background */
-    color: #000 !important; /* Black icon/text so it is visible */
-    border: 1px solid rgba(255,255,255,0.15);
-    padding: 8px 12px;
-    border-radius: 8px;
-  }
 
-  /* Optional: hover effect */
-  .menu-btn:hover {
-    background: #00c8e0 !important; /* slightly lighter blue */
-  }
-}
 
 
