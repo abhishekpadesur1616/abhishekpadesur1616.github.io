@@ -442,7 +442,7 @@ body{
   }
 }
 
-/* MY PIC MODAL */
+/* ========== MY PIC MODAL (polished) ========== */
 
 .modal {
   position: fixed;
@@ -457,6 +457,7 @@ body{
   display: flex;
 }
 
+/* dim & blur background */
 .modal-backdrop {
   position: absolute;
   inset: 0;
@@ -464,44 +465,78 @@ body{
   backdrop-filter: blur(4px);
 }
 
+/* panel with subtle background so caption remains legible */
 .modal-panel {
   position: relative;
   width: calc(100% - 40px);
-  max-width: 900px;
+  max-width: 920px;
   margin: 20px;
-  background: transparent;
+  background: rgba(0,0,0,0.18); /* translucent panel that respects light/dark */
   border-radius: 14px;
   text-align: center;
   z-index: 10;
+  padding: 14px;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(2px);
 }
 
+/* close button */
 .modal-close {
   position: absolute;
   top: 12px;
   right: 12px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.06);
   color: var(--text);
   border: none;
   padding: 8px 10px;
   border-radius: 8px;
   cursor: pointer;
+  font-size: 16px;
 }
+.modal-close:hover { transform: translateY(-2px); }
+.modal-close:focus { outline: 2px solid rgba(0,0,0,0.12); }
 
+/* photo container (landscape crop) */
 .modal-photo-wrap {
   width: 100%;
   height: 360px;
   overflow: hidden;
-  border-radius: 14px;
+  border-radius: 12px;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.55);
 }
 
+/* the image uses cover to crop portrait into landscape */
 .modal-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
+/* caption under photo */
+.modal-caption {
+  margin-top: 12px;
+  padding: 6px 4px 10px;
+}
+.modal-caption h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+}
 .modal-caption p {
+  margin: 6px 0 0 0;
   color: var(--muted);
+  font-size: 14px;
 }
 
+/* responsive smaller height and spacing */
+@media (max-width: 900px) {
+  .modal-panel { max-width: 92%; margin: 12px; padding: 10px; }
+  .modal-photo-wrap { height: 48vh; } /* responsive height */
+  .modal-caption h3 { font-size: 20px; }
+}
 
+/* Accessibility: ensure modal content is readable in light theme too */
+body.light .modal-panel { background: rgba(255,255,255,0.06); }
