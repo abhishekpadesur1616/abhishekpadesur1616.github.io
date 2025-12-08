@@ -188,20 +188,29 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
   /* ---------------- MY PIC MODAL ---------------- */
-  const myPicBtn = document.getElementById('myPicBtn');
-  const myPicModal = document.getElementById('myPicModal');
-  const myPicBackdrop = document.getElementById('myPicBackdrop');
-  const myPicClose = document.getElementById('myPicClose');
+  (function myPicModal() {
+    const myPicBtn = document.getElementById('myPicBtn');
+    const myPicModal = document.getElementById('myPicModal');
+    const myPicBackdrop = document.getElementById('myPicBackdrop');
+    const myPicClose = document.getElementById('myPicClose');
 
-  if (myPicBtn && myPicModal) {
+    if (!myPicBtn) return; // no opener found; nothing to do
+
     const openModal = () => {
+      if (!myPicModal) return;
       myPicModal.classList.add('open');
+      myPicModal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
+      // focus close control for keyboard users (if available)
+      if (myPicClose) myPicClose.focus();
     };
 
     const closeModal = () => {
+      if (!myPicModal) return;
       myPicModal.classList.remove('open');
+      myPicModal.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
+      myPicBtn.focus(); // return focus to opener
     };
 
     myPicBtn.addEventListener('click', (e) => {
@@ -213,8 +222,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (myPicBackdrop) myPicBackdrop.addEventListener('click', closeModal);
 
     document.addEventListener('keydown', (e) => {
-      if (e.key === "Escape") closeModal();
+      if (e.key === 'Escape' && myPicModal && myPicModal.classList.contains('open')) {
+        closeModal();
+      }
     });
-  }
+  })();
 
 }); // END DOMContentLoaded
