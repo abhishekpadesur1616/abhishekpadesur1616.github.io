@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentTheme =
     localStorage.getItem('theme') ||
     (window.matchMedia &&
-    window.matchMedia('(prefers-color-scheme: light)').matches
-      ? 'light'
-      : 'dark');
+      window.matchMedia('(prefers-color-scheme: light)').matches
+        ? 'light'
+        : 'dark');
 
   if (currentTheme === 'light') document.body.classList.add('light');
 
@@ -186,5 +186,35 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   })();
+
+  /* ---------------- MY PIC MODAL ---------------- */
+  const myPicBtn = document.getElementById('myPicBtn');
+  const myPicModal = document.getElementById('myPicModal');
+  const myPicBackdrop = document.getElementById('myPicBackdrop');
+  const myPicClose = document.getElementById('myPicClose');
+
+  if (myPicBtn && myPicModal) {
+    const openModal = () => {
+      myPicModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+      myPicModal.classList.remove('open');
+      document.body.style.overflow = '';
+    };
+
+    myPicBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    });
+
+    if (myPicClose) myPicClose.addEventListener('click', closeModal);
+    if (myPicBackdrop) myPicBackdrop.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === "Escape") closeModal();
+    });
+  }
 
 }); // END DOMContentLoaded
