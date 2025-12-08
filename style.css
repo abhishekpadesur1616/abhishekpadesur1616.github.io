@@ -553,23 +553,18 @@ body.light .modal-panel { background: rgba(255,255,255,0.06); }
   /* Show hamburger button */
   .menu-btn {
     display: block !important;
-  }
-  /* Fix mobile menu button visibility */
-@media (max-width: 900px) {
-  .menu-btn {
-    background: var(--accent) !important; /* Blue background */
-    color: #000 !important; /* Black icon/text so it is visible */
-    border: 1px solid rgba(255,255,255,0.15);
+
+    /* FIX: Make button visible */
+    background: var(--accent) !important; /* Blue */
+    color: #000 !important; /* Black icon */
+    border: 1px solid rgba(255,255,255,0.20);
     padding: 8px 12px;
     border-radius: 8px;
   }
 
-  /* Optional: hover effect */
   .menu-btn:hover {
-    background: #00c8e0 !important; /* slightly lighter blue */
+    background: #00c8e0 !important;
   }
-}
-
 }
 
 /* When menu is opened */
@@ -586,14 +581,14 @@ body.light .modal-panel { background: rgba(255,255,255,0.06); }
   box-shadow: 0 20px 50px rgba(0,0,0,0.6);
   z-index: 9999;
 
-  /* This fixes your issue — menu will not be cut */
+  /* Prevent menu from being cut off */
   max-height: calc(100vh - 80px);
   overflow-y: auto;
 
   width: min(92vw, 320px);
 }
 
-/* Make each link full width + tappable */
+/* Menu links styling */
 .nav.open a {
   display: block;
   padding: 12px;
@@ -607,7 +602,6 @@ body.light .modal-panel { background: rgba(255,255,255,0.06); }
 .nav.open a:hover {
   background: rgba(255,255,255,0.03);
 }
-
 
 
 
