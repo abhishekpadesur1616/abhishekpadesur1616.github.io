@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Abhishek | Portfolio</title>
+  <title>Abhishek | Restart</title>
 
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
@@ -14,7 +14,7 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand">Abhishek</div>
+      <div class="brand">Restart</div>
 
       <nav class="nav" id="nav">
         <a href="#home">Home</a>
@@ -22,6 +22,8 @@
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
+         <a href="#" id="myPicBtn">My_pic</a>
+        
       </nav>
 
       <div class="actions">
@@ -380,8 +382,6 @@
 
         <p><strong>Location:</strong> Hubli, Karnataka, India</p>
 
-        <p>Prefer Instagram — I usually reply within a day.</p>
-
         <!-- Social Icons -->
         <div class="contact-social reveal" data-delay="200">
           <a href="https://github.com/abhishekpadesur1616" target="_blank" class="contact-icon">
@@ -437,6 +437,28 @@
     </p>
   </div>
 </footer>
+
+  <!-- ======================== MY PIC MODAL ======================== -->
+<div id="myPicModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="myPicTitle">
+
+    <div class="modal-backdrop" id="myPicBackdrop"></div>
+
+    <div class="modal-panel" role="document">
+      <button class="modal-close" id="myPicClose" aria-label="Close">✕</button>
+
+      <div class="modal-photo-wrap">
+        <img src="photo.jpg" alt="Abhishek Padesur" class="modal-photo">
+      </div>
+
+      <div class="modal-caption">
+        <h3 id="myPicTitle">Abhishek Padesur</h3>
+        <p class="muted">#restart</p>
+      </div>
+    </div>
+</div>
+</body>
+</html>
+
 
 
 
